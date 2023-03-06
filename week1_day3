@@ -1,0 +1,45 @@
+/* During the code-based test of Java, Peter has been assigned a task to implement a class which reads the Account Number(Long), Account Holder Name(String), Gender (M/F) (Character) and Amount (Integer) to be withdrawn at runtime.
+
+Given that the Current Account Balance is 20000, it is expected to perform the withdrawl if amount to be withdrawn is less than or equal to 20000 and message to be displayed is:
+
+Hi Mr./Ms. XXX! Your Account Balance after withdrawl is YYYYY.
+
+If the amount to be withdrawn is greater than the Current Account Balance, then the message displayed is:
+
+Hi Mr./Ms. XXX! Insufficient Funds! You can not withdraw AAAAA.*/
+
+
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        Long Ac_no = sc.nextLong();
+        String Ac_Name= sc.nextLine();
+        
+        Ac_Name+=sc.nextLine();
+        
+        Character Gender = sc.next().charAt(0);
+        int Wit_Ammount = sc.nextInt();
+        int Cur_Ammount = 20000;
+        
+        if(Wit_Ammount<=20000){
+              if(Gender =='M'){
+                  System.out.println("Hi Mr. " +Ac_Name + "!");
+                  System.out.print("Your Account Balance after withdrawl is " +(Cur_Ammount-Wit_Ammount) +".");
+              }else{
+                  System.out.println("Hi Ms. "+Ac_Name +" !");
+                  System.out.print("Your Account Balance after withdrawl is " +(Cur_Ammount-Wit_Ammount) +".");
+              }
+            
+        }else{
+            System.out.println("Hi Ms. "+Ac_Name +"!");
+            System.out.print("Insufficient Funds! You can not withdraw " +Wit_Ammount +".");
+        }
+        
+    }
+}
