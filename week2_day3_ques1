@@ -1,0 +1,44 @@
+/* Peter has been given an assignment to implement the code to convert the temprature from FORENHITE to CELCIUS and vice versa. 
+Kindly help him to implement the code such that user can choose the conversion type
+
+FORENHITE to CELCIUS CELCIUS to FORENHITE and then enter the value of temperature to be converted and display the temptrature in the appropriate format.
+
+If user enters the choice any thing else then print INVALID CHOICE*/
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Sol {
+    public static void main(String[] args) {
+         Scanner sc=new Scanner(System.in);
+        
+         int ch=sc.nextInt();
+         double temperature=sc.nextDouble();
+        
+         double convertedTemperature;
+         if(ch==1) 
+             
+         {
+             convertedTemperature=(temperature-32)*5/9;
+             System.out.printf("%.2f",convertedTemperature);
+         } 
+        
+         else if(ch==2) 
+             
+         {
+               convertedTemperature=(temperature*9/5)+32;
+               System.out.printf("%.1f",convertedTemperature);
+         } 
+        
+        
+         else
+         {
+               System.out.println("INVALID CHOICE");
+         }        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
