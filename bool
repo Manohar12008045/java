@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class in {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        
+        int x = obj.nextInt();
+        int y = obj.nextInt();
+        int n = obj.nextInt();
+        boolean found = false;
+        
+        
+        for (int i = x; i <= y; i++) {
+            if (i % n == 0) {
+                
+                System.out.print(i + " ");
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("NO OUTPUT");
+        }
+    }
+}
